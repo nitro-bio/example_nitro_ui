@@ -5,7 +5,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nitro-bio/sequence-viewers/dist/nitro-ui.umd.js",
+    /* "./node_modules/@nitro-bio/sequence-viewers/dist/nitro-ui.umd.js", */
   ],
   theme: {
     extend: {

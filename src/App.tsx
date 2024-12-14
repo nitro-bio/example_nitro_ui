@@ -1,5 +1,5 @@
 // can import css if no tailwind
-// import "../node_modules/@nitro-bio/sequence-viewers/dist/nitro.css";
+import '@nitro-bio/sequence-viewers/dist/nitro.css';
 
 const cn = (...classNames: (string | boolean)[]) =>
   classNames.filter(Boolean).join(" ");
