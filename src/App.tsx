@@ -1,5 +1,5 @@
 // can import css if no tailwind
-import '@nitro-bio/sequence-viewers/dist/nitro.css';
+import "@nitro-bio/sequence-viewers/dist/nitro.css";
 
 const cn = (...classNames: (string | boolean)[]) =>
   classNames.filter(Boolean).join(" ");
@@ -36,7 +36,7 @@ function App() {
             {mode} mode
           </button>
         </header>
-        <_SequenceViewer />
+        <ExampleSequenceViewer />
       </div>
     </main>
   );
@@ -49,8 +49,8 @@ import {
 } from "@nitro-bio/sequence-viewers";
 import { useState } from "react";
 
-export const _SequenceViewer = () => {
-  const [selection] = useState<AriadneSelection | null>({
+export const ExampleSequenceViewer = () => {
+  const [selection, setSelection] = useState<AriadneSelection | null>({
     start: 140,
     end: 200,
     direction: "forward",
@@ -61,7 +61,7 @@ export const _SequenceViewer = () => {
       type: "CDS",
       direction: "forward",
       start: 10,
-      end: 200,
+      end: 10,
       className:
         "dark:text-amber-800 dark:bg-amber-400 bg-amber-600 text-white",
     },
@@ -69,8 +69,8 @@ export const _SequenceViewer = () => {
       text: "example",
       type: "foo",
       direction: "reverse",
-      start: 300,
-      end: 20,
+      start: 11,
+      end: 11,
       className: "dark:text-rose-800 dark:bg-rose-400 bg-rose-600 text-white",
     },
   ];
@@ -92,6 +92,7 @@ export const _SequenceViewer = () => {
         " ".repeat(80) + "ATGC".repeat(70),
       ]}
       annotations={annotations}
+      setSelection={setSelection}
       selection={selection}
       selectionClassName="bg-brand-600/20 dark:bg-brand-100/30"
       charClassName={charClassName}
