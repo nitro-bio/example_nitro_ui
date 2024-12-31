@@ -74,8 +74,20 @@ export const ExampleSequenceViewer = () => {
       className: "dark:text-rose-800 dark:bg-rose-400 bg-rose-600 text-white",
     },
   ];
-  const charClassName = ({ sequenceIdx }: { sequenceIdx: number }) => {
+  const charClassName = ({
+    base,
+    sequenceIdx,
+  }: {
+    base: {
+      base: string;
+      index: number;
+    };
+    sequenceIdx: number;
+  }) => {
     if (sequenceIdx === 0) {
+      if (base.index >= 14 && base.index <= 80) {
+        return "pt-2 dark:text-red-300 text-red-600";
+      }
       return "pt-2 dark:text-brand-300 text-brand-600";
     } else if (sequenceIdx === 1) {
       return "dark:text-indigo-300 text-indigo-600";
