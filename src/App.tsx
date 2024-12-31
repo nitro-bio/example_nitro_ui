@@ -86,9 +86,9 @@ export const ExampleSequenceViewer = () => {
   }) => {
     if (sequenceIdx === 0) {
       if (base.index >= 14 && base.index <= 80) {
-        return "pt-2 dark:text-red-300 text-red-600";
+        return "pt-2 sequence-red";
       }
-      return "pt-2 dark:text-brand-300 text-brand-600";
+      return "pt-2 sequence-green";
     } else if (sequenceIdx === 1) {
       return "dark:text-indigo-300 text-indigo-600";
     } else {
